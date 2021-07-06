@@ -1,0 +1,31 @@
+{
+  "name": "APP-Hearthstone",
+  "version": "1.0.0",
+  "description": "APP para renderizar Cards do jogo Hearthstone",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon api/backend.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renatosheep/APP-Hearthstone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/renatosheep/APP-Hearthstone/issues"
+  },
+  "homepage": "https://github.com/renatosheep/APP-Hearthstone#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fetch-node": "^0.0.1",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  }
+}
