@@ -1,10 +1,13 @@
 const hero = document.querySelector("#hero");
+const item = document.querySelector("#qtd");
 
 const types = async (opt, opt2) => {
     document.getElementById("section").innerHTML = ''
-    const listaFactions = await fetch(`http://localhost:3000/${opt}/${opt2}`)
+	const pageSize = item.value
+	console.log(pageSize)
+    const listaFactions = await fetch(`http://localhost:3000/${opt}/${opt2}?pageSize=${pageSize}`)
     const respostaFactions = await listaFactions.json()
-    respostaFactions.map((itemFactions) => {
+	respostaFactions.map((itemFactions) => {
         if (itemFactions.img) {
             const conteudoFactions = `
 								<div class="card">
@@ -24,4 +27,8 @@ const types = async (opt, opt2) => {
 		}
     })
 }
+
+
+
+
 

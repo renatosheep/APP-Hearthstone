@@ -20,9 +20,12 @@ let types = (type) => {
 
 app.get('/types/:type', function (req, res) {
   const { type } = req.params
-  axios.request(types(type)).then(function (response) {
+    console.log(req.params)
+  const { pageSize } = req.query
+    console.log(req.query)
+    axios.request(types(type)).then(function (response) {
     let resp = response.data;
-    resp = resp.splice(0, 29);
+    resp = resp.splice(0, pageSize);
     console.log(resp.length)
     res.json(resp)
 
@@ -45,9 +48,12 @@ let factions = (faction) => {
 
 app.get('/factions/:faction', function (req, res) {
   const { faction } = req.params
+    console.log(req.params)
+  const { pageSize } = req.query
+    console.log(req.query)
     axios.request(factions(faction)).then(function (response) {
     let resp = response.data;
-    resp = resp.splice(0, 29);
+    resp = resp.splice(0, pageSize);
     console.log(resp.length)
     res.json(resp)
 
@@ -69,9 +75,12 @@ let races = (race) => {
 
 app.get('/races/:race', function (req, res) {
   const { race } = req.params
+    console.log(req.params)
+  const { pageSize } = req.query
+    console.log(req.query)
     axios.request(races(race)).then(function (response) {
     let resp = response.data;
-    resp = resp.splice(0, 15);
+    resp = resp.splice(0, pageSize);
     console.log(resp.length)
     res.json(resp)
 
@@ -93,9 +102,12 @@ let qualities = (qualitie) => {
 
 app.get('/qualities/:qualitie', function (req, res) {
   const {qualitie } = req.params
+    console.log(req.params)
+  const { pageSize } = req.query
+    console.log(req.query)
     axios.request(qualities(qualitie)).then(function (response) {
     let resp = response.data;
-    resp = resp.splice(0, 29);
+    resp = resp.splice(0, pageSize);
     console.log(resp.length)
     res.json(resp)
 

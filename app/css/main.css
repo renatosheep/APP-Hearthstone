@@ -56,5 +56,10 @@ main{
     font-size: 1.1rem;
     -webkit-text-stroke-width: 1.2px;
     -webkit-text-stroke-color: #000;
+    transform: rotate(-5deg);
+}
+
+.filter__item{
+    color: var(--cor-font);
 }
 
